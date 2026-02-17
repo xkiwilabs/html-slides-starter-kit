@@ -25,8 +25,8 @@ That's it. You have a working 6-slide lecture deck.
 
 | File/Folder | What it is |
 |-------------|-----------|
-| [`index.html`](index.html) | Complete 6-slide example lecture deck |
-| [`single-slide-template.html`](single-slide-template.html) | Self-contained single slide (all CSS inline) |
+| [`index.html`](https://xkiwilabs.github.io/html-slides-starter-kit/) | Complete 6-slide example lecture deck ([view live](https://xkiwilabs.github.io/html-slides-starter-kit/)) |
+| [`single-slide-template.html`](https://xkiwilabs.github.io/html-slides-starter-kit/single-slide-template.html) | Self-contained single slide ([view live](https://xkiwilabs.github.io/html-slides-starter-kit/single-slide-template.html)) |
 | [`css/academic-theme.css`](css/academic-theme.css) | Professional dark theme — change 3 colours to rebrand |
 | [`examples/`](examples/) | Individual slide type examples (title, columns, grid, etc.) |
 | [`guides/`](guides/) | Step-by-step how-to guides |
@@ -37,18 +37,18 @@ That's it. You have a working 6-slide lecture deck.
 
 ## Example Slide Types
 
-Each example works as a standalone file — double-click to preview.
+Each example works as a standalone file — click to preview live, or double-click the file locally.
 
-| Example | Layout |
-|---------|--------|
-| [Title slide](examples/title-slide.html) | Centred title, author, institution |
-| [Section divider](examples/section-divider.html) | Section break with large number |
-| [Text slide](examples/text-slide.html) | Bullets + coloured highlight boxes |
-| [Image slide](examples/image-slide.html) | Two-column: text + image |
-| [Diagram slide](examples/diagram-slide.html) | Flow chart / process diagram |
-| [Figure slide](examples/figure-slide.html) | Python/R-generated figure display |
-| [Two-column](examples/two-column.html) | Side-by-side comparison |
-| [Grid layout](examples/grid-layout.html) | 2×2 grid with coloured borders |
+| Example | Layout | Live Preview |
+|---------|--------|:------------:|
+| [Title slide](examples/title-slide.html) | Centred title, author, institution | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/title-slide.html) |
+| [Section divider](examples/section-divider.html) | Section break with large number | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/section-divider.html) |
+| [Text slide](examples/text-slide.html) | Bullets + coloured highlight boxes | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/text-slide.html) |
+| [Image slide](examples/image-slide.html) | Two-column: text + image | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/image-slide.html) |
+| [Diagram slide](examples/diagram-slide.html) | Flow chart / process diagram | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/diagram-slide.html) |
+| [Figure slide](examples/figure-slide.html) | Python/R-generated figure display | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/figure-slide.html) |
+| [Two-column](examples/two-column.html) | Side-by-side comparison | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/two-column.html) |
+| [Grid layout](examples/grid-layout.html) | 2×2 grid with coloured borders | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/grid-layout.html) |
 
 ---
 
@@ -156,6 +156,6 @@ See [PDF Export](guides/pdf-export.md) for detailed instructions.
 
 ## AI Disclosure
 
-This repository was created with the assistance of AI tools (Claude). All content has been reviewed, tested, and edited by the author. The prompts, guides, and code represent the author's expertise and judgement about what works best for academic presentations.
+This repository was created with the assistance of AI tools (Claude, Claude Code, GPT-5, and Gemini). All content has been reviewed, tested, and edited by the author. The prompts, guides, and code represent the author's expertise and judgement about what works best for academic presentations.
 
 *Built by [xKiwiLabs](https://xkiwilabs.com) — Michael J. Richardson, Macquarie University*
