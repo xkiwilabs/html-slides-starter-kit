@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  RESULTS SLIDE EXAMPLE — Single-Slide Presentation
+  ============================================================
+
+  This is an example of a single-slide results presentation
+  with multiple nested figures/charts — the kind you'd present
+  in a 3-minute lightning talk or lab presentation.
+
+  It demonstrates how to embed Python/R-generated figures
+  (as images or base64) into a structured slide layout.
+
+  HOW TO USE:
+  1. Generate your figures in Python (matplotlib, seaborn, etc.)
+     and save them as PNG or SVG files in the img/ folder
+  2. Replace the placeholder SVGs below with your figure paths
+  3. Update the title, annotations, and takeaway text
+  4. Present! (double-click to open, arrow keys to navigate)
+
+  For base64 embedding (no external image files needed):
+    import base64
+    with open("figure.png", "rb") as f:
+        b64 = base64.b64encode(f.read()).decode()
+    print(f'<img src="data:image/png;base64,{b64}">')
+
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results Slide — Nested Figures Example</title>
+
+  <!-- reveal.js from CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+  <!-- Google Fonts (optional — system fonts used as fallback) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #2563EB;
+      --dark: #1A1A2E;
+      --light-text: #F0F0F0;
+      --muted: #B0B0C0;
+      --blue: #4A90D9;
+      --green: #5BA55B;
+      --orange: #E8873D;
+      --purple: #7B68A8;
+      --red: #D9534F;
+    }
+
+    .reveal { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; font-size: 32px; color: var(--light-text); }
+    .reveal .slides section { text-align: left; padding: 30px 50px; box-sizing: border-box; height: 100%; }
+    .reveal .slide-background { background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #1E40AF 100%); }
+
+    .reveal h1 { font-size: 1.6em; font-weight: 700; color: #fff; margin: 0 0 4px 0; text-transform: none; }
+    .reveal h2 { font-size: 1.1em; font-weight: 700; color: #fff; margin: 0 0 8px 0; text-transform: none; border: none; display: block; }
+    .reveal h3 { font-size: 0.75em; font-weight: 600; margin: 0 0 4px 0; text-transform: none; }
+    .reveal p { font-size: 0.65em; line-height: 1.5; margin: 0 0 6px 0; }
+
+    /* Header bar */
+    .slide-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+    .slide-header .meta { text-align: right; font-size: 0.6em; color: var(--muted); }
+
+    /* Figure grid — 2×2 with narrow gaps */
+    .figure-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .figure-panel {
+      background: rgba(255,255,255,0.03);
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .figure-panel img {
+      width: 100%;
+      border-radius: 6px;
+      flex: 1;
+      object-fit: contain;
+    }
+
+    .figure-panel .caption {
+      font-size: 0.5em;
+      color: var(--muted);
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    .figure-panel.blue { border-left: 4px solid var(--blue); }
+    .figure-panel.green { border-left: 4px solid var(--green); }
+    .figure-panel.orange { border-left: 4px solid var(--orange); }
+    .figure-panel.purple { border-left: 4px solid var(--purple); }
+
+    /* Takeaway bar at bottom */
+    .takeaway {
+      background: rgba(37, 99, 235, 0.12);
+      border-left: 4px solid var(--primary);
+      border-radius: 8px;
+      padding: 10px 16px;
+      margin-top: 12px;
+      font-size: 0.65em;
+    }
+    .takeaway strong { color: var(--primary); }
+
+    /* Full-height layout */
+    .results-layout {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .reveal .controls { color: var(--primary); }
+    .reveal .progress { color: var(--primary); height: 4px; }
+    .reveal .slide-number { font-size: 14px; color: var(--muted); background: transparent; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+        <div class="results-layout">
+
+          <!-- Header -->
+          <div class="slide-header">
+            <div>
+              <!-- REPLACE: Your title and subtitle -->
+              <h1>Lifestyle Predictors of Psychological Distress</h1>
+              <p style="color: var(--muted); margin: 0;">Sleep, exercise, and screen time associations with DASS-21 scores (N = 3,000)</p>
+            </div>
+            <div class="meta">
+              <!-- REPLACE: Your name and course -->
+              Jane Smith<br>PSYC4411 &bull; Week 3
+            </div>
+          </div>
+
+          <!-- 2×2 Figure Grid -->
+          <div class="figure-grid">
+
+            <div class="figure-panel blue">
+              <h3 style="color: var(--blue);">A. Sleep Duration &times; Distress</h3>
+              <!--
+                REPLACE: Your figure path or base64 image
+                <img src="img/fig-a-sleep.png" alt="Sleep vs DASS scatter">
+                or
+                <img src="data:image/png;base64,YOUR_BASE64_HERE" alt="Sleep vs DASS scatter">
+              -->
+              <img src="img/placeholder-chart.svg" alt="Placeholder — replace with your scatter plot">
+              <p class="caption">Fig A. Negative association between sleep hours and DASS-21 total (r = −.34, p &lt; .001)</p>
+            </div>
+
+            <div class="figure-panel green">
+              <h3 style="color: var(--green);">B. Exercise Frequency Distribution</h3>
+              <!-- REPLACE: Your figure -->
+              <img src="img/placeholder-chart.svg" alt="Placeholder — replace with your histogram">
+              <p class="caption">Fig B. Weekly exercise sessions by distress category (low / moderate / high)</p>
+            </div>
+
+            <div class="figure-panel orange">
+              <h3 style="color: var(--orange);">C. Screen Time &times; Anxiety</h3>
+              <!-- REPLACE: Your figure -->
+              <img src="img/placeholder-chart.svg" alt="Placeholder — replace with your heatmap">
+              <p class="caption">Fig C. Daily screen hours predict anxiety subscale scores (&beta; = 0.28, p &lt; .001)</p>
+            </div>
+
+            <div class="figure-panel purple">
+              <h3 style="color: var(--purple);">D. Combined Model Coefficients</h3>
+              <!-- REPLACE: Your figure -->
+              <img src="img/placeholder-chart.svg" alt="Placeholder — replace with your coefficient plot">
+              <p class="caption">Fig D. Standardised regression coefficients (95% CI) for all lifestyle predictors</p>
+            </div>
+
+          </div>
+
+          <!-- Takeaway -->
+          <div class="takeaway">
+            <!-- REPLACE: Your key finding -->
+            <strong>Key finding:</strong> Sleep duration and screen time were the strongest independent predictors of psychological distress, even after controlling for exercise, caffeine intake, and social media use.
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1920, height: 1080, margin: 0,
+      center: false,
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      hash: true,
+      transition: 'slide',
+      transitionSpeed: 'fast'
+    });
+  </script>
+</body>
+</html>
