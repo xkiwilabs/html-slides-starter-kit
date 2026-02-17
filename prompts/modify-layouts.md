@@ -2,7 +2,9 @@
 
 Ready-to-paste prompts for changing the layout of existing slides. Works with any AI assistant.
 
-> **Tip:** Always paste the current slide HTML so the AI knows what it's working with.
+> **How to provide context:** In a **chatbot** — paste your slide HTML into the chat. In **VS Code** — open the file so the AI sees it. With a **CLI agent** — reference the file path (e.g. `index.html`). See [build-slides.md](build-slides.md) for a full comparison of the three approaches.
+
+> **Tip:** Always provide the current slide HTML so the AI knows what it's working with.
 
 ---
 

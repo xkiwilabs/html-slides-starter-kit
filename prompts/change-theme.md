@@ -2,7 +2,7 @@
 
 Ready-to-paste prompts for customising colours, fonts, and branding. Works with any AI assistant.
 
-> **Tip:** Attach `css/academic-theme.css` with every prompt so the AI can modify the right variables.
+> **How to provide context:** In a **chatbot** — paste `css/academic-theme.css` into the chat. In **VS Code** — open the file in a tab. With a **CLI agent** — reference the path `css/academic-theme.css`. See [build-slides.md](build-slides.md) for a full comparison of the three approaches.
 
 ---
 

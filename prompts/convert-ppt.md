@@ -2,6 +2,8 @@
 
 Ready-to-paste prompts for converting existing PowerPoint slides to reveal.js HTML. Works with any AI assistant.
 
+> **How to provide context:** In a **chatbot** — paste slide content into the chat. In **VS Code** — open your files so the AI sees them. With a **CLI agent** — reference file paths directly (the AI can read your `.pptx` export or notes file). See [build-slides.md](build-slides.md) for a full comparison of the three approaches.
+
 > **Tip:** The more context you provide (content, layout description, colours), the better the conversion.
 
 ---

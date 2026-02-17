@@ -1,8 +1,23 @@
 # Prompt Cookbook: Build Slides from Scratch
 
-Ready-to-paste prompts for creating new slides. Works with any AI assistant — VS Code Copilot, Claude, ChatGPT, Gemini CLI, Codex, or any other tool.
+Ready-to-paste prompts for creating new slides. Works with any AI assistant.
 
-> **Tip:** For best results, attach or paste `css/academic-theme.css` as context with every prompt.
+## Three ways to use these prompts
+
+How you provide context depends on which kind of tool you're using:
+
+| Tool type | Examples | How to provide files |
+|-----------|---------|---------------------|
+| **Chatbot** | Claude, ChatGPT, Gemini | Paste file contents into the chat, or attach files |
+| **VS Code / editor** | Copilot, Cline, Continue | Open files in the editor — the AI sees them automatically |
+| **CLI / coding agent** | Claude Code, Gemini CLI, Codex | Reference files by path — the AI reads them directly |
+
+The prompts below say "(attached)" for file context. Adapt this for your tool:
+- **Chatbot:** paste `css/academic-theme.css` into the chat
+- **VS Code:** open `css/academic-theme.css` in a tab
+- **CLI agent:** the AI already has access — just reference the path `css/academic-theme.css`
+
+> **Tip:** For CLI tools and VS Code agents, you can reference files by path instead of pasting. For example: *"Read css/academic-theme.css and use those classes to create a new slide."*
 
 ---
 
@@ -188,6 +203,7 @@ tags to each slide with:
 
 **When to use:** You have lecture notes or an outline and want slides generated.
 
+**Chatbot version** (paste content into the chat):
 ```
 Here is my lecture outline for [TOPIC]:
 
@@ -195,6 +211,22 @@ Here is my lecture outline for [TOPIC]:
 
 Convert this into a reveal.js HTML deck using my CSS theme
 (attached). For each section:
+- Use title-slide for the opening
+- Use section-divider for major topic transitions
+- Use appropriate layouts (bullets, two-column, flow-diagram,
+  grid, highlight boxes) based on the content
+- Use end-slide for the final slide
+- Add speaker notes
+
+Keep bullet points concise (max 8 words per point).
+Use reveal.js 5.1.0 from CDN. Link to css/academic-theme.css.
+```
+
+**VS Code / CLI agent version** (reference files by path):
+```
+Read my lecture notes at [PATH/TO/notes.md] and the CSS theme
+at css/academic-theme.css. Convert the notes into a reveal.js
+HTML deck saved as index.html. For each section:
 - Use title-slide for the opening
 - Use section-divider for major topic transitions
 - Use appropriate layouts (bullets, two-column, flow-diagram,
