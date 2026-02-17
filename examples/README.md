@@ -13,6 +13,20 @@ Each example is a standalone reveal.js slide — click **Live Preview** to see i
 | [Two-column](two-column.html) | Side-by-side comparison | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/two-column.html) |
 | [Grid layout](grid-layout.html) | 2×2 grid with coloured borders | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/grid-layout.html) |
 
+### Templates
+
+| Template | Description | Live Preview |
+|----------|-------------|:------------:|
+| [Single slide template](single-slide-template.html) | Self-contained starter — all CSS inline | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/single-slide-template.html) |
+
+### Light Theme (results presentations)
+
+These examples use [`css/light-theme.css`](../css/light-theme.css) — a white-background academic style.
+
+| Example | Description | Live Preview |
+|---------|-------------|:------------:|
+| [Results presentation](results-presentation.html) | Tabbed figures with annotation text | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/results-presentation.html) |
+
 ---
 
 To use any example as a starting point, copy the file, rename it, and edit the content.

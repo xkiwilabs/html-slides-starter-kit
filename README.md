@@ -26,10 +26,9 @@ That's it. You have a working 6-slide lecture deck.
 | File/Folder | What it is |
 |-------------|-----------|
 | [`index.html`](https://xkiwilabs.github.io/html-slides-starter-kit/) | Complete 6-slide example lecture deck ([view live](https://xkiwilabs.github.io/html-slides-starter-kit/)) |
-| [`single-slide-template.html`](https://xkiwilabs.github.io/html-slides-starter-kit/single-slide-template.html) | Self-contained single slide ([view live](https://xkiwilabs.github.io/html-slides-starter-kit/single-slide-template.html)) |
-| [`results-slide-example.html`](https://xkiwilabs.github.io/html-slides-starter-kit/results-slide-example.html) | Results presentation with nested figures ([view live](https://xkiwilabs.github.io/html-slides-starter-kit/results-slide-example.html)) |
 | [`css/academic-theme.css`](css/academic-theme.css) | Professional dark theme — change 3 colours to rebrand |
-| [`examples/`](examples/) | Individual slide type examples (title, columns, grid, etc.) |
+| [`css/light-theme.css`](css/light-theme.css) | Light background theme — traditional academic style |
+| [`examples/`](examples/) | Slide type examples, templates, and results presentation |
 | [`guides/`](guides/) | Step-by-step how-to guides |
 | [`prompts/`](prompts/) | AI prompt templates — copy, paste, generate |
 | [`img/`](img/) | Your images and figures go here |
@@ -50,6 +49,8 @@ Each example works as a standalone file — click to preview live, or double-cli
 | [Figure slide](examples/figure-slide.html) | Python/R-generated figure display | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/figure-slide.html) |
 | [Two-column](examples/two-column.html) | Side-by-side comparison | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/two-column.html) |
 | [Grid layout](examples/grid-layout.html) | 2×2 grid with coloured borders | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/grid-layout.html) |
+| [Single slide template](examples/single-slide-template.html) | Self-contained starter (all CSS inline) | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/single-slide-template.html) |
+| [Results presentation](examples/results-presentation.html) | Tabbed figures + annotations (light theme) | [view](https://xkiwilabs.github.io/html-slides-starter-kit/examples/results-presentation.html) |
 
 ---
 

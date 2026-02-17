@@ -1,0 +1,421 @@
+/*
+ * ============================================================
+ *  LIGHT THEME for reveal.js
+ *  HTML Slides Starter Kit — xkiwilabs.com
+ * ============================================================
+ *
+ *  A clean, light-background academic theme inspired by the
+ *  PSYC4411 slide style at Macquarie University.
+ *
+ *  White/light grey background, dark text, coloured accents.
+ *  Use this when you want a traditional academic slide look.
+ *
+ *  ╔══════════════════════════════════════════════════════════╗
+ *  ║  CUSTOMISE THESE — Change the variables below to        ║
+ *  ║  match your university or organisation's brand.          ║
+ *  ╚══════════════════════════════════════════════════════════╝
+ */
+
+:root {
+  /* === PRIMARY BRAND COLOURS === */
+  --theme-primary: #A71930;        /* Main accent — headings, bullets       */
+  --theme-primary-dark: #8B1428;   /* Darker variant — gradients            */
+  --theme-primary-light: #D4533B;  /* Lighter variant                       */
+  --theme-gold: #C8972C;           /* Secondary accent — key insights       */
+
+  /* === BACKGROUND & TEXT === */
+  --theme-charcoal: #2D2D2D;       /* Primary text colour                   */
+  --theme-grey: #8C8C8C;           /* Secondary / muted text                */
+  --theme-light-grey: #F5F5F5;     /* Panel backgrounds                     */
+  --theme-white: #FFFFFF;          /* Slide background                      */
+  --theme-near-black: #1a1a1a;     /* Code block background                 */
+
+  /* === SEMANTIC COLOURS === */
+  --theme-blue: #4A90D9;
+  --theme-green: #5BA55B;
+  --theme-orange: #E8873D;
+  --theme-purple: #7B68A8;
+
+  /* === TYPOGRAPHY === */
+  --theme-font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --theme-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+
+/* ============================================================
+ *  BASE SLIDE STYLES
+ * ============================================================ */
+
+.reveal {
+  font-family: var(--theme-font-main);
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--theme-charcoal);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+ *  TYPOGRAPHY
+ * ============================================================ */
+
+.reveal h1 {
+  font-size: 2.4em;
+  font-weight: 800;
+  color: var(--theme-primary);
+  margin-bottom: 0.3em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+.reveal h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--theme-primary);
+  margin-bottom: 0.4em;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.reveal h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: var(--theme-charcoal);
+  margin-bottom: 0.3em;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+.reveal h4 {
+  font-size: 1.0em;
+  font-weight: 600;
+  color: var(--theme-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5em;
+}
+
+.reveal p {
+  font-size: 0.95em;
+  line-height: 1.55;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+}
+
+.reveal strong {
+  font-weight: 700;
+  color: var(--theme-charcoal);
+}
+
+.reveal em {
+  color: var(--theme-grey);
+}
+
+
+/* ============================================================
+ *  LISTS — Triangle bullets (▸)
+ * ============================================================ */
+
+.reveal ul {
+  list-style: none;
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.reveal ul > li {
+  font-size: 0.95em;
+  line-height: 1.45;
+  margin-bottom: 0.3em;
+  padding-left: 0.2em;
+}
+
+.reveal ul > li::before {
+  content: "▸";
+  color: var(--theme-primary);
+  font-weight: 700;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.reveal li li {
+  font-size: 0.88em;
+  color: var(--theme-grey);
+}
+
+.reveal ol {
+  margin-left: 0.5em;
+}
+
+.reveal ol li {
+  font-size: 0.95em;
+  line-height: 1.45;
+  margin-bottom: 0.3em;
+}
+
+
+/* ============================================================
+ *  TITLE SLIDE
+ * ============================================================ */
+
+.title-slide {
+  text-align: center;
+  padding: 80px 60px;
+}
+
+.title-slide h1 {
+  color: var(--theme-white);
+  font-size: 2.6em;
+  margin-bottom: 0.2em;
+}
+
+.title-slide h2 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.title-slide .subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.7em;
+  font-weight: 300;
+}
+
+.title-slide .course-code {
+  display: inline-block;
+  background: var(--theme-primary);
+  color: white;
+  padding: 0.2em 0.8em;
+  border-radius: 4px;
+  font-size: 0.65em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5em;
+}
+
+
+/* ============================================================
+ *  SECTION DIVIDER
+ * ============================================================ */
+
+.section-divider {
+  text-align: center;
+  padding: 80px 60px;
+}
+
+.section-divider h2 {
+  color: var(--theme-white);
+  font-size: 2.2em;
+  font-weight: 800;
+  margin-bottom: 0.3em;
+}
+
+.section-divider p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85em;
+  font-weight: 300;
+}
+
+
+/* ============================================================
+ *  LAYOUTS — Two Column
+ * ============================================================ */
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.two-col-wide-left {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.two-col-wide-right {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.col img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+
+/* ============================================================
+ *  HIGHLIGHT / INFO / KEY INSIGHT BOXES
+ * ============================================================ */
+
+.highlight-box {
+  background: rgba(167, 25, 48, 0.08);
+  border-left: 4px solid var(--theme-primary);
+  padding: 16px 24px;
+  border-radius: 0 8px 8px 0;
+  margin: 16px 0;
+}
+
+.highlight-box p {
+  margin-bottom: 0;
+  font-size: 0.95em;
+}
+
+.info-box {
+  background: rgba(74, 144, 217, 0.08);
+  border-left: 4px solid var(--theme-blue);
+  padding: 16px 24px;
+  border-radius: 0 8px 8px 0;
+  margin: 16px 0;
+}
+
+.key-insight {
+  background: rgba(200, 151, 44, 0.1);
+  border-left: 4px solid var(--theme-gold);
+  padding: 16px 24px;
+  border-radius: 0 8px 8px 0;
+  margin: 16px 0;
+}
+
+
+/* ============================================================
+ *  TAGS / BADGES
+ * ============================================================ */
+
+.tag {
+  display: inline-block;
+  padding: 0.15em 0.6em;
+  border-radius: 20px;
+  font-size: 0.6em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+}
+
+.tag-primary { background: rgba(167, 25, 48, 0.12); color: var(--theme-primary); }
+.tag-blue { background: rgba(74, 144, 217, 0.12); color: var(--theme-blue); }
+.tag-green { background: rgba(91, 165, 91, 0.12); color: var(--theme-green); }
+.tag-orange { background: rgba(232, 135, 61, 0.12); color: var(--theme-orange); }
+.tag-purple { background: rgba(123, 104, 168, 0.12); color: var(--theme-purple); }
+
+
+/* ============================================================
+ *  CODE BLOCKS
+ * ============================================================ */
+
+.reveal code {
+  font-family: var(--theme-font-mono);
+  font-size: 0.85em;
+  background: var(--theme-light-grey);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  color: var(--theme-primary-dark);
+}
+
+.reveal pre {
+  background: var(--theme-near-black);
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 0.55em;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.reveal pre code {
+  background: none;
+  color: #e0e0e0;
+  padding: 0;
+}
+
+
+/* ============================================================
+ *  END SLIDE
+ * ============================================================ */
+
+.end-slide {
+  text-align: center;
+  padding: 80px 60px;
+}
+
+.end-slide h1 {
+  color: var(--theme-white);
+  font-size: 2.2em;
+}
+
+.end-slide p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8em;
+}
+
+
+/* ============================================================
+ *  UTILITY CLASSES
+ * ============================================================ */
+
+.small { font-size: 0.75em; color: var(--theme-grey); }
+.attribution { font-size: 0.6em; color: var(--theme-grey); text-align: right; margin-top: 1em; }
+.spacer { height: 12px; }
+.spacer-sm { height: 6px; }
+.spacer-lg { height: 24px; }
+.text-center { text-align: center; }
+
+
+/* ============================================================
+ *  REVEAL.JS CONTROLS
+ * ============================================================ */
+
+.reveal .controls {
+  color: var(--theme-primary);
+}
+
+.reveal .progress {
+  color: var(--theme-primary);
+  height: 4px;
+}
+
+.reveal .slide-number {
+  font-family: var(--theme-font-main);
+  color: var(--theme-grey);
+  background: transparent;
+}
+
+
+/* ============================================================
+ *  LINKS
+ * ============================================================ */
+
+.reveal a {
+  color: var(--theme-blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(74, 144, 217, 0.3);
+  transition: border-color 0.2s;
+}
+
+.reveal a:hover {
+  border-bottom-color: var(--theme-blue);
+}
+
+
+/* ============================================================
+ *  PRINT / PDF
+ * ============================================================ */
+
+@media print {
+  .reveal .slides section {
+    page-break-after: always;
+  }
+}

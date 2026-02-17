@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  RESULTS PRESENTATION — Tabbed Figures Example
+  ============================================================
+
+  A single-slide results presentation with tabbed figure panels
+  and annotation text — the kind you'd present in a 3-minute
+  lightning talk or lab presentation.
+
+  Uses the light theme (white background, clean academic style).
+
+  HOW TO USE:
+  1. Generate your figures in Python (matplotlib, seaborn, etc.)
+     and save them as PNG or SVG
+  2. Replace the placeholder images in each tab-panel
+  3. Update the annotations in the right column
+  4. Click the tabs to switch between figures during your talk
+
+  For base64 embedding (no external files needed):
+    import base64
+    with open("figure.png", "rb") as f:
+        b64 = base64.b64encode(f.read()).decode()
+    print(f'<img src="data:image/png;base64,{b64}">')
+
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results Presentation — Tabbed Figures</title>
+
+  <!-- reveal.js from CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Light theme -->
+  <link rel="stylesheet" href="../css/light-theme.css">
+
+  <style>
+    /* ===== Results Slide Layout ===== */
+    .results-layout {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .results-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .results-header .meta {
+      text-align: right;
+      font-size: 0.55em;
+      color: var(--theme-grey);
+      white-space: nowrap;
+    }
+
+    .results-header .course-code {
+      display: inline-block;
+      background: var(--theme-primary);
+      color: white;
+      padding: 0.15em 0.6em;
+      border-radius: 4px;
+      font-size: 0.5em;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .results-header h1 {
+      font-size: 1.5em;
+      margin-bottom: 2px;
+    }
+
+    .results-header .subtitle {
+      font-size: 0.6em;
+      color: var(--theme-grey);
+      font-weight: 300;
+      margin: 0;
+    }
+
+    /* ===== Two-column body ===== */
+    .results-body {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 30px;
+      flex: 1;
+      min-height: 0;
+    }
+
+    /* ===== Tab Navigation ===== */
+    .tab-bar {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+
+    .tab-btn {
+      padding: 8px 18px;
+      border: 2px solid var(--theme-light-grey);
+      border-radius: 8px 8px 0 0;
+      background: var(--theme-light-grey);
+      color: var(--theme-grey);
+      font-family: var(--theme-font-main);
+      font-size: 0.6em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      border-bottom: 2px solid transparent;
+    }
+
+    .tab-btn:hover {
+      background: white;
+      color: var(--theme-charcoal);
+    }
+
+    .tab-btn.active {
+      background: white;
+      color: var(--theme-primary);
+      border-color: var(--theme-primary);
+      border-bottom-color: white;
+    }
+
+    /* Colour variants for tabs */
+    .tab-btn[data-color="blue"].active { color: var(--theme-blue); border-color: var(--theme-blue); border-bottom-color: white; }
+    .tab-btn[data-color="green"].active { color: var(--theme-green); border-color: var(--theme-green); border-bottom-color: white; }
+    .tab-btn[data-color="orange"].active { color: var(--theme-orange); border-color: var(--theme-orange); border-bottom-color: white; }
+    .tab-btn[data-color="purple"].active { color: var(--theme-purple); border-color: var(--theme-purple); border-bottom-color: white; }
+
+    /* ===== Tab Panels ===== */
+    .tab-panels {
+      flex: 1;
+      position: relative;
+      min-height: 0;
+    }
+
+    .tab-panel {
+      display: none;
+      height: 100%;
+      flex-direction: column;
+    }
+
+    .tab-panel.active {
+      display: flex;
+    }
+
+    .tab-panel img {
+      width: 100%;
+      flex: 1;
+      object-fit: contain;
+      border-radius: 8px;
+      background: var(--theme-light-grey);
+      border: 1px solid #e0e0e0;
+    }
+
+    .tab-panel .fig-caption {
+      font-size: 0.5em;
+      color: var(--theme-grey);
+      margin-top: 8px;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    /* ===== Right Column: Annotations ===== */
+    .annotations {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .annotation-box {
+      background: var(--theme-light-grey);
+      border-radius: 8px;
+      padding: 14px 18px;
+      border-left: 4px solid var(--theme-grey);
+    }
+
+    .annotation-box h3 {
+      font-size: 0.7em;
+      margin: 0 0 4px 0;
+    }
+
+    .annotation-box p {
+      font-size: 0.6em;
+      margin: 0;
+      color: var(--theme-grey);
+      line-height: 1.4;
+    }
+
+    .annotation-box.blue { border-left-color: var(--theme-blue); }
+    .annotation-box.blue h3 { color: var(--theme-blue); }
+
+    .annotation-box.green { border-left-color: var(--theme-green); }
+    .annotation-box.green h3 { color: var(--theme-green); }
+
+    .annotation-box.orange { border-left-color: var(--theme-orange); }
+    .annotation-box.orange h3 { color: var(--theme-orange); }
+
+    .annotation-box.purple { border-left-color: var(--theme-purple); }
+    .annotation-box.purple h3 { color: var(--theme-purple); }
+
+    /* ===== Key Finding Footer ===== */
+    .key-finding {
+      background: rgba(200, 151, 44, 0.1);
+      border-left: 4px solid var(--theme-gold);
+      border-radius: 0 8px 8px 0;
+      padding: 12px 20px;
+      margin-top: 14px;
+      font-size: 0.65em;
+    }
+
+    .key-finding strong {
+      color: var(--theme-gold);
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+        <div class="results-layout">
+
+          <!-- Header -->
+          <div class="results-header">
+            <div>
+              <!-- REPLACE: Your course tag -->
+              <div class="course-code">PSYC4411</div>
+              <!-- REPLACE: Your title -->
+              <h1>Lifestyle Predictors of Psychological Distress</h1>
+              <p class="subtitle">Sleep, exercise, and screen time associations with DASS-21 scores (N = 3,000)</p>
+            </div>
+            <div class="meta">
+              <!-- REPLACE: Your name and details -->
+              Jane Smith<br>Week 3 Presentation<br>Semester 1, 2026
+            </div>
+          </div>
+
+          <!-- Two-column body: figures left, annotations right -->
+          <div class="results-body">
+
+            <!-- Left: Tabbed figures -->
+            <div style="display: flex; flex-direction: column; min-height: 0;">
+
+              <!-- Tab buttons -->
+              <div class="tab-bar">
+                <button class="tab-btn active" data-tab="fig-a" data-color="blue">A. Sleep × Distress</button>
+                <button class="tab-btn" data-tab="fig-b" data-color="green">B. Exercise</button>
+                <button class="tab-btn" data-tab="fig-c" data-color="orange">C. Screen Time</button>
+                <button class="tab-btn" data-tab="fig-d" data-color="purple">D. Model</button>
+              </div>
+
+              <!-- Tab panels -->
+              <div class="tab-panels">
+                <div class="tab-panel active" id="fig-a">
+                  <!-- REPLACE: Your figure A -->
+                  <img src="../img/placeholder-chart.svg" alt="Scatter plot: sleep duration vs DASS-21">
+                  <p class="fig-caption">Fig A. Sleep duration (hours) vs DASS-21 total score. Each point = 1 participant.</p>
+                </div>
+
+                <div class="tab-panel" id="fig-b">
+                  <!-- REPLACE: Your figure B -->
+                  <img src="../img/placeholder-chart.svg" alt="Histogram: exercise frequency by distress group">
+                  <p class="fig-caption">Fig B. Distribution of weekly exercise sessions across distress categories.</p>
+                </div>
+
+                <div class="tab-panel" id="fig-c">
+                  <!-- REPLACE: Your figure C -->
+                  <img src="../img/placeholder-chart.svg" alt="Heatmap: screen time vs anxiety">
+                  <p class="fig-caption">Fig C. Relationship between daily screen hours and DASS anxiety subscale.</p>
+                </div>
+
+                <div class="tab-panel" id="fig-d">
+                  <!-- REPLACE: Your figure D -->
+                  <img src="../img/placeholder-chart.svg" alt="Forest plot: regression coefficients">
+                  <p class="fig-caption">Fig D. Standardised regression coefficients with 95% confidence intervals.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right: Annotation boxes -->
+            <div class="annotations">
+              <div class="annotation-box blue">
+                <h3>Sleep Duration</h3>
+                <p>Strong negative association with distress (r = −.34, p &lt; .001). Participants sleeping &lt; 6 hours showed 2× higher DASS scores.</p>
+              </div>
+
+              <div class="annotation-box green">
+                <h3>Exercise Frequency</h3>
+                <p>Moderate protective effect. 3+ sessions/week associated with significantly lower distress (d = 0.45).</p>
+              </div>
+
+              <div class="annotation-box orange">
+                <h3>Screen Time</h3>
+                <p>Positive predictor of anxiety specifically (β = 0.28, p &lt; .001). Effect strongest for recreational screen time.</p>
+              </div>
+
+              <div class="annotation-box purple">
+                <h3>Combined Model</h3>
+                <p>Sleep and screen time remained significant after controlling for all other lifestyle factors (R² = .31).</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Key Finding -->
+          <div class="key-finding">
+            <!-- REPLACE: Your key finding -->
+            <strong>Key finding:</strong> Sleep duration and screen time were the strongest independent predictors of psychological distress, even after controlling for exercise, caffeine intake, and social media use.
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- reveal.js -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      width: 1920,
+      height: 1080,
+      margin: 0.04,
+      transition: 'slide',
+      transitionSpeed: 'default',
+      center: false,
+      pdfSeparateFragments: false
+    });
+
+    // Tab switching logic
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const tabId = btn.dataset.tab;
+
+        // Update buttons
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Update panels
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
