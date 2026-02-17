@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example: Text Slide</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/academic-theme.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- TEXT / ANALYTICAL SLIDE — bullets + highlight boxes -->
+      <section>
+        <h2>Types of Research</h2>
+
+        <p>Research methods are broadly classified into two paradigms, each with distinct strengths:</p>
+
+        <div class="two-column">
+          <div class="highlight-box blue">
+            <h3>Quantitative Research</h3>
+            <ul>
+              <li>Uses numerical data and statistical analysis</li>
+              <li>Emphasises objectivity and replicability</li>
+              <li>Examples: experiments, surveys, meta-analyses</li>
+            </ul>
+          </div>
+
+          <div class="highlight-box green">
+            <h3>Qualitative Research</h3>
+            <ul>
+              <li>Uses text, interviews, and observations</li>
+              <li>Emphasises depth and contextual understanding</li>
+              <li>Examples: case studies, ethnography, thematic analysis</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="highlight-box gold spacer">
+          <h3>Mixed Methods</h3>
+          <p>Combines both approaches — increasingly common in modern research to triangulate findings and strengthen conclusions.</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1920, height: 1080, margin: 0,
+      center: false,
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      hash: true,
+      transition: 'slide',
+      transitionSpeed: 'fast'
+    });
+  </script>
+</body>
+</html>

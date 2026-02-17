@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example: Two-Column Comparison</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/academic-theme.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- TWO-COLUMN COMPARISON — side-by-side content -->
+      <section>
+        <h2>Experimental vs. Observational</h2>
+
+        <div class="two-column">
+          <div>
+            <div class="highlight-box blue">
+              <h3>Experimental Studies</h3>
+              <ul>
+                <li>Researcher <strong>manipulates</strong> the independent variable</li>
+                <li>Random assignment to conditions</li>
+                <li>Can establish <strong>causation</strong></li>
+                <li>High internal validity</li>
+              </ul>
+              <div class="spacer">
+                <span class="tag blue">Controlled</span>
+                <span class="tag green">Causal</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="highlight-box orange">
+              <h3>Observational Studies</h3>
+              <ul>
+                <li>Researcher <strong>observes</strong> naturally occurring variation</li>
+                <li>No random assignment</li>
+                <li>Can establish <strong>correlation</strong></li>
+                <li>High ecological validity</li>
+              </ul>
+              <div class="spacer">
+                <span class="tag orange">Naturalistic</span>
+                <span class="tag purple">Correlational</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="muted small spacer text-center">
+          Neither approach is inherently "better" — the right choice depends on your research question.
+        </p>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1920, height: 1080, margin: 0,
+      center: false,
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      hash: true,
+      transition: 'slide',
+      transitionSpeed: 'fast'
+    });
+  </script>
+</body>
+</html>

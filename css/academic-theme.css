@@ -1,0 +1,854 @@
+/*
+ * ============================================================
+ *  ACADEMIC THEME for reveal.js
+ *  HTML Slides Starter Kit — xkiwilabs.com
+ * ============================================================
+ *
+ *  A clean, professional dark theme for academic presentations.
+ *  Derived from a university lecture theme; made generic for
+ *  any institution, department, or course.
+ *
+ *  Works with reveal.js 5.x via CDN — no build step needed.
+ *
+ * ============================================================
+ *
+ *  ╔══════════════════════════════════════════════════════════╗
+ *  ║  CUSTOMISE THESE — Change the variables below to        ║
+ *  ║  match your university or organisation's brand.          ║
+ *  ║  These 8 colours control the entire theme.               ║
+ *  ╚══════════════════════════════════════════════════════════╝
+ */
+
+:root {
+  /* === PRIMARY BRAND COLOURS === */
+  --theme-primary: #2563EB;        /* Main accent — buttons, links, borders  */
+  --theme-primary-dark: #1E40AF;   /* Darker variant — gradients, hover      */
+  --theme-accent: #D97706;         /* Secondary accent — highlights, tags     */
+
+  /* === BACKGROUND & TEXT === */
+  --theme-charcoal: #2D2D2D;       /* Text on light backgrounds               */
+  --theme-dark: #1A1A2E;           /* Darkest background                      */
+  --theme-light-text: #F0F0F0;     /* Primary text colour on dark slides      */
+  --theme-muted-text: #B0B0C0;     /* Secondary / dimmed text                 */
+
+  /* === SEMANTIC COLOURS === */
+  --theme-blue: #4A90D9;
+  --theme-green: #5BA55B;
+  --theme-orange: #E8873D;
+  --theme-purple: #7B68A8;
+  --theme-red: #D9534F;
+  --theme-gold: #D4A843;
+
+  /* === GRADIENTS === */
+  --theme-gradient: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #1E40AF 100%);
+  --theme-gradient-dark: linear-gradient(135deg, #0F0F1A 0%, #1A1A2E 100%);
+
+  /* === TYPOGRAPHY === */
+  --theme-font-heading: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --theme-font-body: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --theme-font-mono: 'Fira Code', 'Consolas', 'Monaco', monospace;
+}
+
+
+/* ============================================================
+ *  BASE SLIDE STYLES
+ * ============================================================ */
+
+.reveal .slides section {
+  text-align: left;
+  padding: 40px 60px;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: var(--theme-font-body);
+  color: var(--theme-light-text);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal {
+  font-family: var(--theme-font-body);
+  font-size: 32px;
+  color: var(--theme-light-text);
+}
+
+.reveal .slide-background {
+  background: var(--theme-gradient);
+}
+
+
+/* ============================================================
+ *  TYPOGRAPHY
+ * ============================================================ */
+
+.reveal h1 {
+  font-family: var(--theme-font-heading);
+  font-size: 2.4em;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.4em;
+  line-height: 1.15;
+  text-transform: none;
+}
+
+.reveal h2 {
+  font-family: var(--theme-font-heading);
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  text-transform: none;
+  border-bottom: 3px solid var(--theme-primary);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.reveal h3 {
+  font-family: var(--theme-font-heading);
+  font-size: 1.3em;
+  font-weight: 600;
+  color: var(--theme-primary);
+  margin-bottom: 0.4em;
+  text-transform: none;
+}
+
+.reveal h4 {
+  font-family: var(--theme-font-heading);
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--theme-muted-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.reveal p {
+  font-size: 0.85em;
+  line-height: 1.7;
+  margin-bottom: 0.8em;
+  color: var(--theme-light-text);
+}
+
+.reveal strong {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.reveal em {
+  color: var(--theme-accent);
+  font-style: italic;
+}
+
+
+/* ============================================================
+ *  LISTS — Triangle bullets (▸)
+ * ============================================================ */
+
+.reveal ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.reveal ul li {
+  padding-left: 1.4em;
+  position: relative;
+  margin-bottom: 0.5em;
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+.reveal ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--theme-primary);
+  font-weight: bold;
+}
+
+/* Nested bullets */
+.reveal ul ul li::before {
+  content: '▹';
+  color: var(--theme-muted-text);
+}
+
+.reveal ol {
+  padding-left: 1.4em;
+  margin-left: 0;
+}
+
+.reveal ol li {
+  margin-bottom: 0.5em;
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+/* Coloured bullet variants */
+.reveal ul.blue-bullets li::before { color: var(--theme-blue); }
+.reveal ul.green-bullets li::before { color: var(--theme-green); }
+.reveal ul.orange-bullets li::before { color: var(--theme-orange); }
+.reveal ul.purple-bullets li::before { color: var(--theme-purple); }
+.reveal ul.red-bullets li::before { color: var(--theme-red); }
+
+
+/* ============================================================
+ *  TITLE SLIDE
+ * ============================================================ */
+
+.title-slide {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--theme-gradient) !important;
+}
+
+.title-slide h1 {
+  font-size: 3em;
+  margin-bottom: 0.2em;
+  border-bottom: none;
+}
+
+.title-slide .subtitle {
+  font-size: 1.3em;
+  color: var(--theme-primary);
+  font-weight: 400;
+  margin-bottom: 1.5em;
+}
+
+.title-slide .author {
+  font-size: 1.1em;
+  color: var(--theme-light-text);
+  margin-bottom: 0.3em;
+}
+
+.title-slide .affiliation {
+  font-size: 0.85em;
+  color: var(--theme-muted-text);
+  margin-bottom: 0.2em;
+}
+
+.title-slide .date {
+  font-size: 0.8em;
+  color: var(--theme-muted-text);
+  margin-top: 1em;
+}
+
+.title-slide .title-decoration {
+  width: 120px;
+  height: 4px;
+  background: var(--theme-primary);
+  margin: 0 auto 1.5em;
+  border-radius: 2px;
+}
+
+
+/* ============================================================
+ *  SECTION DIVIDER
+ * ============================================================ */
+
+.section-divider {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--theme-gradient-dark) !important;
+}
+
+.section-divider h2 {
+  font-size: 2.5em;
+  border-bottom: none;
+  display: block;
+  color: #FFFFFF;
+}
+
+.section-divider .section-number {
+  font-size: 4em;
+  font-weight: 800;
+  color: var(--theme-primary);
+  opacity: 0.3;
+  margin-bottom: -0.2em;
+}
+
+.section-divider .section-description {
+  font-size: 1.1em;
+  color: var(--theme-muted-text);
+  max-width: 700px;
+  margin-top: 0.5em;
+}
+
+
+/* ============================================================
+ *  THINK / DISCUSSION SLIDES
+ * ============================================================ */
+
+.think-slide {
+  background: linear-gradient(135deg, #1A1A2E 0%, #2D1B4E 100%) !important;
+}
+
+.think-slide h2 {
+  color: var(--theme-purple);
+  border-bottom-color: var(--theme-purple);
+}
+
+.discussion-slide {
+  background: linear-gradient(135deg, #1A1A2E 0%, #1B3A2E 100%) !important;
+}
+
+.discussion-slide h2 {
+  color: var(--theme-green);
+  border-bottom-color: var(--theme-green);
+}
+
+
+/* ============================================================
+ *  HIGHLIGHT BOXES
+ * ============================================================ */
+
+.highlight-box {
+  padding: 24px 30px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border-left: 5px solid;
+}
+
+.highlight-box h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  margin-bottom: 0.4em;
+}
+
+.highlight-box p {
+  margin-bottom: 0;
+  font-size: 0.8em;
+}
+
+/* Blue box */
+.highlight-box.blue,
+.highlight-blue {
+  background: rgba(74, 144, 217, 0.1);
+  border-left-color: var(--theme-blue);
+}
+
+.highlight-box.blue h3,
+.highlight-blue h3 {
+  color: var(--theme-blue);
+}
+
+/* Red box */
+.highlight-box.red,
+.highlight-red {
+  background: rgba(217, 83, 79, 0.1);
+  border-left-color: var(--theme-red);
+}
+
+.highlight-box.red h3,
+.highlight-red h3 {
+  color: var(--theme-red);
+}
+
+/* Gold box */
+.highlight-box.gold,
+.highlight-gold {
+  background: rgba(212, 168, 67, 0.1);
+  border-left-color: var(--theme-gold);
+}
+
+.highlight-box.gold h3,
+.highlight-gold h3 {
+  color: var(--theme-gold);
+}
+
+/* Green box */
+.highlight-box.green,
+.highlight-green {
+  background: rgba(91, 165, 91, 0.1);
+  border-left-color: var(--theme-green);
+}
+
+.highlight-box.green h3,
+.highlight-green h3 {
+  color: var(--theme-green);
+}
+
+/* Purple box */
+.highlight-box.purple,
+.highlight-purple {
+  background: rgba(123, 104, 168, 0.1);
+  border-left-color: var(--theme-purple);
+}
+
+.highlight-box.purple h3,
+.highlight-purple h3 {
+  color: var(--theme-purple);
+}
+
+/* Orange box */
+.highlight-box.orange,
+.highlight-orange {
+  background: rgba(232, 135, 61, 0.1);
+  border-left-color: var(--theme-orange);
+}
+
+.highlight-box.orange h3,
+.highlight-orange h3 {
+  color: var(--theme-orange);
+}
+
+
+/* ============================================================
+ *  TAGS / BADGES
+ * ============================================================ */
+
+.tag {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.7em;
+  font-weight: 600;
+  margin-right: 8px;
+  margin-bottom: 6px;
+}
+
+.tag.blue { background: rgba(74, 144, 217, 0.2); color: var(--theme-blue); }
+.tag.green { background: rgba(91, 165, 91, 0.2); color: var(--theme-green); }
+.tag.orange { background: rgba(232, 135, 61, 0.2); color: var(--theme-orange); }
+.tag.purple { background: rgba(123, 104, 168, 0.2); color: var(--theme-purple); }
+.tag.red { background: rgba(217, 83, 79, 0.2); color: var(--theme-red); }
+.tag.gold { background: rgba(212, 168, 67, 0.2); color: var(--theme-gold); }
+
+
+/* ============================================================
+ *  LAYOUTS — Two-Column
+ * ============================================================ */
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.two-column.wide-left {
+  grid-template-columns: 2fr 1fr;
+}
+
+.two-column.wide-right {
+  grid-template-columns: 1fr 2fr;
+}
+
+.three-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+
+/* ============================================================
+ *  LAYOUTS — Grid
+ * ============================================================ */
+
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.grid-2x2 > div {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 24px;
+  border-left: 4px solid var(--theme-primary);
+}
+
+.grid-2x2 > div:nth-child(2) {
+  border-left-color: var(--theme-green);
+}
+
+.grid-2x2 > div:nth-child(3) {
+  border-left-color: var(--theme-orange);
+}
+
+.grid-2x2 > div:nth-child(4) {
+  border-left-color: var(--theme-purple);
+}
+
+
+/* ============================================================
+ *  IMAGE SLIDES
+ * ============================================================ */
+
+.image-slide .two-column {
+  align-items: center;
+}
+
+.image-slide img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.reveal section img {
+  border: none;
+  box-shadow: none;
+  max-width: 100%;
+}
+
+.reveal section img.rounded {
+  border-radius: 12px;
+}
+
+.reveal section img.shadow {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ============================================================
+ *  FLOW DIAGRAMS
+ * ============================================================ */
+
+.flow-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.flow-step {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid var(--theme-primary);
+  border-radius: 12px;
+  padding: 20px 28px;
+  text-align: center;
+  min-width: 160px;
+}
+
+.flow-step .step-number {
+  font-size: 1.6em;
+  font-weight: 800;
+  color: var(--theme-primary);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.flow-step .step-label {
+  font-size: 0.85em;
+  color: var(--theme-light-text);
+  font-weight: 600;
+}
+
+.flow-step .step-desc {
+  font-size: 0.7em;
+  color: var(--theme-muted-text);
+  margin-top: 4px;
+}
+
+.flow-arrow {
+  font-size: 1.8em;
+  color: var(--theme-primary);
+  padding: 0 12px;
+  opacity: 0.6;
+}
+
+/* Colour variants for flow steps */
+.flow-step.blue { border-color: var(--theme-blue); }
+.flow-step.blue .step-number { color: var(--theme-blue); }
+
+.flow-step.green { border-color: var(--theme-green); }
+.flow-step.green .step-number { color: var(--theme-green); }
+
+.flow-step.orange { border-color: var(--theme-orange); }
+.flow-step.orange .step-number { color: var(--theme-orange); }
+
+.flow-step.purple { border-color: var(--theme-purple); }
+.flow-step.purple .step-number { color: var(--theme-purple); }
+
+.flow-step.red { border-color: var(--theme-red); }
+.flow-step.red .step-number { color: var(--theme-red); }
+
+
+/* ============================================================
+ *  TIMELINE
+ * ============================================================ */
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  margin: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--theme-primary);
+  opacity: 0.3;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -34px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background: var(--theme-primary);
+  border-radius: 50%;
+  border: 3px solid var(--theme-dark);
+}
+
+.timeline-item .timeline-label {
+  font-weight: 700;
+  color: var(--theme-primary);
+  font-size: 0.9em;
+  margin-bottom: 4px;
+}
+
+.timeline-item .timeline-content {
+  font-size: 0.8em;
+  color: var(--theme-muted-text);
+}
+
+
+/* ============================================================
+ *  CODE BLOCKS
+ * ============================================================ */
+
+.reveal pre {
+  width: 100%;
+  margin: 15px 0;
+  box-shadow: none;
+}
+
+.reveal pre code {
+  font-family: var(--theme-font-mono);
+  font-size: 0.65em;
+  line-height: 1.6;
+  padding: 20px 24px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 500px;
+}
+
+.reveal code {
+  font-family: var(--theme-font-mono);
+  font-size: 0.85em;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+
+/* ============================================================
+ *  END SLIDE
+ * ============================================================ */
+
+.end-slide {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.end-slide h2 {
+  font-size: 2.5em;
+  border-bottom: none;
+  display: block;
+}
+
+.end-slide .contact-info {
+  margin-top: 1em;
+  font-size: 0.9em;
+  color: var(--theme-muted-text);
+}
+
+.end-slide .contact-info a {
+  color: var(--theme-primary);
+}
+
+
+/* ============================================================
+ *  FRAGMENTS — reveal.js animation helpers
+ * ============================================================ */
+
+.reveal .fragment.highlight-current-blue.current-fragment {
+  color: var(--theme-blue);
+}
+
+.reveal .fragment.highlight-current-green.current-fragment {
+  color: var(--theme-green);
+}
+
+.reveal .fragment.highlight-current-red.current-fragment {
+  color: var(--theme-red);
+}
+
+.reveal .fragment.custom-fade-up {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.reveal .fragment.custom-fade-up.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* ============================================================
+ *  UTILITY CLASSES
+ * ============================================================ */
+
+.small { font-size: 0.75em; }
+.smaller { font-size: 0.65em; }
+.large { font-size: 1.2em; }
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.muted { color: var(--theme-muted-text); }
+.text-primary { color: var(--theme-primary); }
+.text-accent { color: var(--theme-accent); }
+.text-blue { color: var(--theme-blue); }
+.text-green { color: var(--theme-green); }
+.text-orange { color: var(--theme-orange); }
+.text-purple { color: var(--theme-purple); }
+.text-red { color: var(--theme-red); }
+
+.spacer { margin-top: 30px; }
+.spacer-large { margin-top: 60px; }
+
+.attribution {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  font-size: 0.55em;
+  color: var(--theme-muted-text);
+  opacity: 0.6;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  height: 50px;
+  opacity: 0.8;
+}
+
+.logo.left {
+  right: auto;
+  left: 30px;
+}
+
+.logo.large {
+  height: 80px;
+}
+
+
+/* ============================================================
+ *  LINKS
+ * ============================================================ */
+
+.reveal a {
+  color: var(--theme-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.reveal a:hover {
+  color: var(--theme-accent);
+  text-decoration: underline;
+}
+
+
+/* ============================================================
+ *  REVEAL.JS CONTROLS & UI
+ * ============================================================ */
+
+.reveal .controls {
+  color: var(--theme-primary);
+}
+
+.reveal .progress {
+  color: var(--theme-primary);
+  height: 4px;
+}
+
+.reveal .slide-number {
+  font-family: var(--theme-font-body);
+  font-size: 14px;
+  color: var(--theme-muted-text);
+  background: transparent;
+  right: 16px;
+  bottom: 10px;
+}
+
+
+/* ============================================================
+ *  SCROLLBAR
+ * ============================================================ */
+
+.reveal ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.reveal ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.reveal ::-webkit-scrollbar-thumb {
+  background: var(--theme-primary);
+  border-radius: 3px;
+}
+
+
+/* ============================================================
+ *  PRINT / PDF EXPORT
+ *  Activate with ?print-pdf in URL
+ * ============================================================ */
+
+@media print {
+  .reveal .slides section {
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+
+  .reveal .slides {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .reveal .controls,
+  .reveal .progress,
+  .reveal .slide-number {
+    display: none !important;
+  }
+
+  .reveal .slide-background {
+    background: var(--theme-gradient) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

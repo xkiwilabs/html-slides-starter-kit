@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example: Figure Slide</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/academic-theme.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!--
+        FIGURE SLIDE — for Python/R-generated plots
+
+        How to use:
+        1. Generate a figure with matplotlib, seaborn, ggplot2, etc.
+        2. Save as PNG or SVG (SVG is sharper at any size)
+        3. Place the file in img/ and update the src below
+        4. Or embed a base64-encoded image directly (see comment below)
+      -->
+      <section>
+        <h2>Experimental Results</h2>
+
+        <div class="text-center">
+          <!--
+            Replace this placeholder with your figure:
+            <img src="../img/your-figure.png" alt="Description" class="rounded shadow" style="max-height: 650px;">
+
+            Or embed base64 directly (useful for generated figures):
+            <img src="data:image/png;base64,YOUR_BASE64_STRING_HERE" alt="Description" class="rounded shadow">
+          -->
+          <img src="../img/placeholder-chart.svg" alt="Placeholder figure — replace with your research data" class="rounded shadow" style="max-height: 650px;">
+          <p class="small muted" style="margin-top: 16px;">
+            Figure 2. Mean scores across conditions. Error bars represent ±1 SE.
+            <em>Replace this placeholder with your own Python/R figure.</em>
+          </p>
+        </div>
+
+        <aside class="notes">
+          Speaker notes: Describe what the figure shows, point out the key
+          comparison, and explain the statistical test used.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1920, height: 1080, margin: 0,
+      center: false,
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      hash: true,
+      transition: 'slide',
+      transitionSpeed: 'fast'
+    });
+  </script>
+</body>
+</html>

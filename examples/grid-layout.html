@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example: Grid Layout</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/academic-theme.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 2×2 GRID LAYOUT — four equal content areas -->
+      <section>
+        <h2>Four Pillars of Research Ethics</h2>
+
+        <div class="grid-2x2">
+          <div>
+            <h3>Informed Consent</h3>
+            <p>Participants must understand what the study involves and agree to take part voluntarily.</p>
+          </div>
+
+          <div>
+            <h3>Minimise Harm</h3>
+            <p>Research should not cause physical or psychological harm beyond what participants experience in daily life.</p>
+          </div>
+
+          <div>
+            <h3>Confidentiality</h3>
+            <p>Personal data must be protected. Results should be reported in a way that individuals cannot be identified.</p>
+          </div>
+
+          <div>
+            <h3>Right to Withdraw</h3>
+            <p>Participants can leave the study at any time without penalty, and their data should be removed on request.</p>
+          </div>
+        </div>
+
+        <p class="attribution">Based on the Belmont Report (1979) and APA Ethics Code</p>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1920, height: 1080, margin: 0,
+      center: false,
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      hash: true,
+      transition: 'slide',
+      transitionSpeed: 'fast'
+    });
+  </script>
+</body>
+</html>

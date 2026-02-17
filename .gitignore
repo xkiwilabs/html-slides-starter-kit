@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Offline packages
+slides-offline.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+*~
+
+# Claude Code
+.claude/
+
+# Planning docs (not for distribution)
+html-slides-starter-repo.md

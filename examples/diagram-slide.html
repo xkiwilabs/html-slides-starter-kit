@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example: Diagram Slide</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/academic-theme.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- DIAGRAM SLIDE — flow chart / process diagram -->
+      <section>
+        <h2>The Research Process</h2>
+        <p>A five-step framework for conducting empirical research:</p>
+
+        <div class="flow-diagram">
+          <div class="flow-step blue">
+            <span class="step-number">1</span>
+            <span class="step-label">Question</span>
+            <span class="step-desc">Define your research question</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-step green">
+            <span class="step-number">2</span>
+            <span class="step-label">Literature</span>
+            <span class="step-desc">Review existing evidence</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-step orange">
+            <span class="step-number">3</span>
+            <span class="step-label">Method</span>
+            <span class="step-desc">Design your study</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-step purple">
+            <span class="step-number">4</span>
+            <span class="step-label">Data</span>
+            <span class="step-desc">Collect and clean data</span>
+          </div>
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-step red">
+            <span class="step-number">5</span>
+            <span class="step-label">Analysis</span>
+            <span class="step-desc">Interpret and report findings</span>
+          </div>
+        </div>
+
+        <div class="highlight-box blue spacer">
+          <h3>Iterative Process</h3>
+          <p>Research is rarely linear — expect to revisit earlier steps as your understanding deepens.</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1920, height: 1080, margin: 0,
+      center: false,
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      hash: true,
+      transition: 'slide',
+      transitionSpeed: 'fast'
+    });
+  </script>
+</body>
+</html>

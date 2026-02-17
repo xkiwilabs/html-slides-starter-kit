@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example: Image Slide</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/academic-theme.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- IMAGE SLIDE — two-column: text on left, image on right -->
+      <section class="image-slide">
+        <h2>Visualising Your Data</h2>
+
+        <div class="two-column">
+          <div>
+            <p>Effective data visualisation helps your audience understand patterns and relationships at a glance.</p>
+
+            <ul>
+              <li><strong>Bar charts</strong> — compare groups or categories</li>
+              <li><strong>Line charts</strong> — show trends over time</li>
+              <li><strong>Scatter plots</strong> — reveal correlations</li>
+              <li><strong>Box plots</strong> — display distributions</li>
+            </ul>
+
+            <div class="highlight-box blue">
+              <h3>Pro Tip</h3>
+              <p>Always label your axes, include units, and add a descriptive caption.</p>
+            </div>
+          </div>
+
+          <div>
+            <!-- Replace src with your own chart or figure -->
+            <img src="../img/placeholder-chart.svg" alt="Sample bar chart showing data across four groups" class="rounded shadow">
+            <p class="small muted text-center">Figure 1. Sample data across four experimental groups.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1920, height: 1080, margin: 0,
+      center: false,
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      hash: true,
+      transition: 'slide',
+      transitionSpeed: 'fast'
+    });
+  </script>
+</body>
+</html>
