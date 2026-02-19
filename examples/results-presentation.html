@@ -136,6 +136,7 @@
     .tab-btn[data-color="green"].active { color: var(--theme-green); border-color: var(--theme-green); border-bottom-color: white; }
     .tab-btn[data-color="orange"].active { color: var(--theme-orange); border-color: var(--theme-orange); border-bottom-color: white; }
     .tab-btn[data-color="purple"].active { color: var(--theme-purple); border-color: var(--theme-purple); border-bottom-color: white; }
+    .tab-btn[data-color="red"].active { color: #E74C3C; border-color: #E74C3C; border-bottom-color: white; }
 
     /* ===== Tab Panels ===== */
     .tab-panels {
@@ -175,7 +176,8 @@
     .annotations {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
+      justify-content: stretch;
     }
 
     .annotation-box {
@@ -183,40 +185,48 @@
       border-radius: 8px;
       padding: 14px 18px;
       border-left: 4px solid var(--theme-grey);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .annotation-box h3 {
-      font-size: 0.7em;
-      margin: 0 0 4px 0;
+      font-size: 0.8em;
+      margin: 0 0 6px 0;
     }
 
     .annotation-box p {
-      font-size: 0.6em;
+      font-size: 0.7em;
       margin: 0;
       color: var(--theme-grey);
-      line-height: 1.4;
+      line-height: 1.45;
     }
 
     .annotation-box.blue { border-left-color: var(--theme-blue); }
     .annotation-box.blue h3 { color: var(--theme-blue); }
 
+    .annotation-box.gold { border-left-color: var(--theme-gold); }
+    .annotation-box.gold h3 { color: var(--theme-gold); }
+
     .annotation-box.green { border-left-color: var(--theme-green); }
     .annotation-box.green h3 { color: var(--theme-green); }
 
-    .annotation-box.orange { border-left-color: var(--theme-orange); }
-    .annotation-box.orange h3 { color: var(--theme-orange); }
-
     .annotation-box.purple { border-left-color: var(--theme-purple); }
     .annotation-box.purple h3 { color: var(--theme-purple); }
+
+    .annotation-box.red { border-left-color: #E74C3C; }
+    .annotation-box.red h3 { color: #E74C3C; }
 
     /* ===== Key Finding Footer ===== */
     .key-finding {
       background: rgba(200, 151, 44, 0.1);
       border-left: 4px solid var(--theme-gold);
       border-radius: 0 8px 8px 0;
-      padding: 12px 20px;
+      padding: 14px 24px;
       margin-top: 14px;
-      font-size: 0.65em;
+      font-size: 0.8em;
+      line-height: 1.45;
     }
 
     .key-finding strong {
@@ -237,12 +247,12 @@
               <!-- REPLACE: Your course tag -->
               <div class="course-code">PSYC4411</div>
               <!-- REPLACE: Your title -->
-              <h1>Lifestyle Predictors of Psychological Distress</h1>
-              <p class="subtitle">Sleep, exercise, and screen time associations with DASS-21 scores (N = 3,000)</p>
+              <h1>Lifestyle Factors and Depression</h1>
+              <p class="subtitle">Exploring key relationships in a simulated lifestyle &amp; mental health dataset (N = 3,000)</p>
             </div>
             <div class="meta">
               <!-- REPLACE: Your name and details -->
-              Jane Smith<br>Week 3 Presentation<br>Semester 1, 2026
+              Example Group<br>Week 2 Challenge Lab<br>Semester 1, 2026
             </div>
           </div>
 
@@ -254,36 +264,36 @@
 
               <!-- Tab buttons -->
               <div class="tab-bar">
-                <button class="tab-btn active" data-tab="fig-a" data-color="blue">A. Sleep × Distress</button>
-                <button class="tab-btn" data-tab="fig-b" data-color="green">B. Exercise</button>
-                <button class="tab-btn" data-tab="fig-c" data-color="orange">C. Screen Time</button>
-                <button class="tab-btn" data-tab="fig-d" data-color="purple">D. Model</button>
+                <button class="tab-btn active" data-tab="fig-a" data-color="blue">Notebook</button>
+                <button class="tab-btn" data-tab="fig-b" data-color="green">Script</button>
+                <button class="tab-btn" data-tab="fig-c" data-color="orange">Exploration</button>
+                <button class="tab-btn" data-tab="fig-d" data-color="purple">Bonus</button>
               </div>
 
               <!-- Tab panels -->
               <div class="tab-panels">
                 <div class="tab-panel active" id="fig-a">
-                  <!-- REPLACE: Your figure A -->
-                  <img src="../img/placeholder-chart.svg" alt="Scatter plot: sleep duration vs DASS-21">
-                  <p class="fig-caption">Fig A. Sleep duration (hours) vs DASS-21 total score. Each point = 1 participant.</p>
+                  <!-- Notebook workflow: 2x2 scatter plots -->
+                  <img src="../img/our_visualisation.png" alt="2x2 scatter plot grid from notebook workflow">
+                  <p class="fig-caption">Notebook workflow — 2&times;2 scatter plots with trend lines and r values</p>
                 </div>
 
                 <div class="tab-panel" id="fig-b">
-                  <!-- REPLACE: Your figure B -->
-                  <img src="../img/placeholder-chart.svg" alt="Histogram: exercise frequency by distress group">
-                  <p class="fig-caption">Fig B. Distribution of weekly exercise sessions across distress categories.</p>
+                  <!-- Script workflow: scatter + violin by gender -->
+                  <img src="../img/depression_by_gender.png" alt="2x3 scatter and violin plot grid from script workflow">
+                  <p class="fig-caption">Script workflow — 2&times;3 scatter + violin plots split by gender</p>
                 </div>
 
                 <div class="tab-panel" id="fig-c">
-                  <!-- REPLACE: Your figure C -->
-                  <img src="../img/placeholder-chart.svg" alt="Heatmap: screen time vs anxiety">
-                  <p class="fig-caption">Fig C. Relationship between daily screen hours and DASS anxiety subscale.</p>
+                  <!-- Exploration: correlation heatmap -->
+                  <img src="../img/correlation_heatmap.png" alt="Correlation heatmap of all numeric variables">
+                  <p class="fig-caption">Data exploration — correlation heatmap showing which variables relate to depression</p>
                 </div>
 
                 <div class="tab-panel" id="fig-d">
-                  <!-- REPLACE: Your figure D -->
-                  <img src="../img/placeholder-chart.svg" alt="Forest plot: regression coefficients">
-                  <p class="fig-caption">Fig D. Standardised regression coefficients with 95% confidence intervals.</p>
+                  <!-- Bonus: group comparison violin plots -->
+                  <img src="../img/bonus_group_comparison.png" alt="Violin plots comparing depression by occupation group">
+                  <p class="fig-caption">Bonus — depression scores by occupation group (students had highest scores)</p>
                 </div>
               </div>
 
@@ -292,23 +302,28 @@
             <!-- Right: Annotation boxes -->
             <div class="annotations">
               <div class="annotation-box blue">
-                <h3>Sleep Duration</h3>
-                <p>Strong negative association with distress (r = −.34, p &lt; .001). Participants sleeping &lt; 6 hours showed 2× higher DASS scores.</p>
+                <h3>Our Approach</h3>
+                <p>Started by exploring the data — a correlation heatmap showed sleep, study hours, and exercise had the strongest associations with DASS Depression scores. Used these to plan a focused 2&times;2 scatter plot figure.</p>
+              </div>
+
+              <div class="annotation-box gold">
+                <h3>Key Finding</h3>
+                <p>Sleep was the strongest predictor (r = &minus;0.37). Study hours showed an unexpected positive association (r = +0.36) — possibly reflecting academic stress. Exercise was protective (r = &minus;0.27).</p>
               </div>
 
               <div class="annotation-box green">
-                <h3>Exercise Frequency</h3>
-                <p>Moderate protective effect. 3+ sessions/week associated with significantly lower distress (d = 0.45).</p>
-              </div>
-
-              <div class="annotation-box orange">
-                <h3>Screen Time</h3>
-                <p>Positive predictor of anxiety specifically (β = 0.28, p &lt; .001). Effect strongest for recreational screen time.</p>
+                <h3>What We Learned About Prompting</h3>
+                <p>Exploring the data first made our prompts much more specific — we could name variables, expected relationships, and the DASS-21 score range. This produced working code on the first attempt.</p>
               </div>
 
               <div class="annotation-box purple">
-                <h3>Combined Model</h3>
-                <p>Sleep and screen time remained significant after controlling for all other lifestyle factors (R² = .31).</p>
+                <h3>Notebook vs Scripts</h3>
+                <p>Notebooks were better for exploration (seeing results after each cell). Scripts were cleaner for the final product. Splitting into explore + visualise scripts mirrored real data science workflows.</p>
+              </div>
+
+              <div class="annotation-box red">
+                <h3>Bonus Challenges</h3>
+                <p>Extended the analysis with occupation-based violin plots — students had markedly higher depression (M = 20.3 vs 8.7 for full-time employed). The exploration step made bonus tasks easier to plan.</p>
               </div>
             </div>
 
@@ -316,8 +331,7 @@
 
           <!-- Key Finding -->
           <div class="key-finding">
-            <!-- REPLACE: Your key finding -->
-            <strong>Key finding:</strong> Sleep duration and screen time were the strongest independent predictors of psychological distress, even after controlling for exercise, caffeine intake, and social media use.
+            <strong>Key finding:</strong> Sleep duration and study hours were the strongest independent lifestyle predictors of depression scores, even after accounting for exercise, social media use, and caffeine intake. Students had the highest depression scores by occupation group.
           </div>
 
         </div>

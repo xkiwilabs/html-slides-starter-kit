@@ -6,13 +6,15 @@ By default, your slides load reveal.js and fonts from the internet (CDN). If you
 
 ## Do You Need This?
 
-If your venue has reliable Wi-Fi, you don't need offline packaging. The CDN approach is simpler and always gives you the latest version.
+**Yes — we recommend always packaging offline.** It takes 30 seconds and guarantees your slides will work regardless of the venue's internet. Don't risk showing up and having your slides fail because the Wi-Fi is down, slow, or blocked.
 
-You need offline packaging if:
-- The venue has no internet
-- Wi-Fi is unreliable (conference centres, older buildings)
-- You want to guarantee your slides work no matter what
+This is especially important if:
+- You're presenting on an unknown or shared computer
+- The venue has no internet or unreliable Wi-Fi (conference centres, older buildings)
 - You're distributing slides on a USB drive
+- You simply want peace of mind that your slides will always work
+
+> **Bottom line:** Following the steps below means your presentation will work every time. The CDN approach is fine for editing at home, but always package offline before you present.
 
 ---
 

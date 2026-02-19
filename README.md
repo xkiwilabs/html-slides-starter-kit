@@ -90,7 +90,7 @@ Ready-to-paste prompts organised by task:
 | [VS Code Setup](guides/vs-code-setup.md) | Live preview, syntax highlighting, AI extensions |
 | [AI Prompts](guides/ai-prompts.md) | Plan → Generate → Verify workflow |
 | [PDF Export](guides/pdf-export.md) | `?print-pdf` step-by-step |
-| [Offline Packaging](guides/offline-packaging.md) | Present without internet |
+| [Offline Packaging](guides/offline-packaging.md) | Present without internet (or on an unknown computer) |
 | [PowerPoint → HTML](guides/ppt-to-html.md) | Convert existing decks |
 | [Customising the Theme](guides/customising-theme.md) | Brand your slides for your university |
 | [Presenting Tips](guides/presenting-tips.md) | Shortcuts, speaker notes, projector setup |
