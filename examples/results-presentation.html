@@ -44,11 +44,18 @@
   <link rel="stylesheet" href="../css/light-theme.css">
 
   <style>
+    /* Override theme section padding to fit more content */
+    .reveal .slides section {
+      padding: 28px 50px;
+    }
+
     /* ===== Results Slide Layout ===== */
     .results-layout {
       display: flex;
       flex-direction: column;
       height: 100%;
+      transform: scale(0.92);
+      transform-origin: top center;
     }
 
     .results-header {
