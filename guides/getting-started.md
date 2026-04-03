@@ -67,3 +67,4 @@ html-slides-starter-kit/
 - **Want to change colours and branding?** → Read [Customising the Theme](customising-theme.md)
 - **Need to export to PDF?** → Read [PDF Export](pdf-export.md)
 - **Presenting for the first time?** → Read [Presenting Tips](presenting-tips.md)
+- **Want to explore other slide tools?** → See [Comparing Slide Tools](../tools/README.md)

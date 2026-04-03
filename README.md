@@ -32,6 +32,7 @@ That's it. You have a working 6-slide lecture deck.
 | [`guides/`](guides/) | Step-by-step how-to guides |
 | [`prompts/`](prompts/) | AI prompt templates — copy, paste, generate |
 | [`img/`](img/) | Your images and figures go here |
+| [`tools/`](tools/) | Compare reveal.js, Marp, Quarto, and Slidev — with working examples |
 
 ---
 
@@ -139,6 +140,12 @@ See [PDF Export](guides/pdf-export.md) for detailed instructions.
 - **System font fallback** — slides look good offline (Segoe UI on Windows, SF Pro on Mac)
 - **1920×1080** native resolution — optimised for projectors
 - **Print-ready** — PDF export via `?print-pdf` query parameter
+
+---
+
+## Other Slide Tools
+
+This starter kit uses reveal.js, but it's not the only option for HTML slides. See [`tools/`](tools/) for a comparison of **Marp**, **Quarto**, **Slidev**, and **Pandoc** — with working examples you can try.
 
 ---
 
