@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to Research Methods</title>
+
+  <!-- reveal.js 5.1.0 from CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+  <style>
+    /* --- Inline dark theme — no external CSS dependency --- */
+
+    :root {
+      --r-background-color: #1a1a2e;
+      --r-main-color: #e0e0e0;
+      --r-heading-color: #58a6ff;
+      --r-link-color: #79c0ff;
+      --r-link-color-hover: #a5d6ff;
+      --r-accent-color: #ff7b72;
+      --r-selection-background-color: rgba(88, 166, 255, 0.3);
+    }
+
+    .reveal-viewport {
+      background: var(--r-background-color);
+    }
+
+    .reveal {
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 32px;
+      color: var(--r-main-color);
+    }
+
+    .reveal h1, .reveal h2, .reveal h3 {
+      color: var(--r-heading-color);
+      text-transform: none;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .reveal h1 { font-size: 1.8em; }
+    .reveal h2 { font-size: 1.4em; }
+    .reveal h3 { font-size: 1.1em; }
+
+    .reveal a {
+      color: var(--r-link-color);
+    }
+    .reveal a:hover {
+      color: var(--r-link-color-hover);
+    }
+
+    .reveal .subtitle {
+      font-size: 0.85em;
+      color: #a0a0b8;
+      margin-top: 0.3em;
+    }
+
+    .reveal .author-info {
+      font-size: 0.65em;
+      color: #8888a0;
+      margin-top: 1.5em;
+      line-height: 1.6;
+    }
+
+    .reveal ul {
+      list-style: disc;
+      text-align: left;
+    }
+
+    .reveal .columns {
+      display: flex;
+      gap: 2em;
+      align-items: flex-start;
+    }
+    .reveal .columns > * {
+      flex: 1;
+    }
+
+    .reveal .accent {
+      color: var(--r-accent-color);
+      font-weight: 600;
+    }
+
+    .reveal .mixed-note {
+      font-size: 0.7em;
+      color: #8888a0;
+      border-top: 1px solid #333355;
+      margin-top: 1em;
+      padding-top: 0.5em;
+    }
+
+    .reveal figure {
+      margin: 0;
+    }
+    .reveal figure img {
+      max-height: 55vh;
+      border-radius: 6px;
+    }
+    .reveal figcaption {
+      font-size: 0.55em;
+      color: #8888a0;
+      margin-top: 0.4em;
+    }
+
+    .reveal .end-slide {
+      text-align: center;
+    }
+    .reveal .end-slide h2 {
+      font-size: 1.8em;
+      margin-bottom: 0.8em;
+    }
+    .reveal .end-slide p {
+      font-size: 0.75em;
+      color: #a0a0b8;
+    }
+
+    ::selection {
+      background: var(--r-selection-background-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ============================================================
+           Slide 1 — Title
+           ============================================================ -->
+      <section>
+        <h1>Introduction to Research Methods</h1>
+        <p class="subtitle">Foundations of Empirical Inquiry</p>
+        <div class="author-info">
+          <p>Dr. Jane Smith</p>
+          <p>Department of Psychology, University Name</p>
+          <p>Semester 1, 2026</p>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           Slide 2 — Text + Bullets
+           ============================================================ -->
+      <section>
+        <h2>Types of Research</h2>
+        <div class="columns">
+          <div>
+            <h3 class="accent">Quantitative</h3>
+            <ul>
+              <li>Numerical data</li>
+              <li>Statistical analysis</li>
+              <li>Experiments &amp; surveys</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="accent">Qualitative</h3>
+            <ul>
+              <li>Text &amp; interviews</li>
+              <li>Depth and context</li>
+              <li>Case studies &amp; ethnography</li>
+            </ul>
+          </div>
+        </div>
+        <p class="mixed-note">
+          <strong>Mixed methods</strong> combine both approaches for a more
+          complete picture of the research question.
+        </p>
+      </section>
+
+      <!-- ============================================================
+           Slide 3 — Image
+           ============================================================ -->
+      <section>
+        <h2>Visualising Your Data</h2>
+        <div class="columns">
+          <div>
+            <ul>
+              <li>Bar charts for group comparisons</li>
+              <li>Line charts for trends over time</li>
+              <li>Scatter plots for relationships</li>
+              <li>Box plots for distributions</li>
+            </ul>
+          </div>
+          <div>
+            <figure>
+              <img src="../../img/placeholder-chart.svg"
+                   alt="Sample bar chart showing data across four experimental groups">
+              <figcaption>Figure 1. Sample data across four experimental groups.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           Slide 4 — End
+           ============================================================ -->
+      <section class="end-slide">
+        <h2>Questions?</h2>
+        <p><a href="mailto:j.smith@university.edu">j.smith@university.edu</a></p>
+        <p>Slides available at:
+          <a href="https://courses.university.edu/psyc1001">courses.university.edu/psyc1001</a>
+        </p>
+      </section>
+
+      <!-- ============================================================
+           Slide 5 — Fragment animations (bonus)
+           ============================================================ -->
+      <section>
+        <h2>Key Concepts (Revealed One by One)</h2>
+        <ul>
+          <!-- Each "fragment" appears on its own click/keypress.
+               Add class="fragment" to any element to animate it in
+               sequentially. You can also use fragment styles such as
+               "fragment fade-up", "fragment highlight-red", etc.
+               See: https://revealjs.com/fragments/ -->
+          <li class="fragment">Hypothesis formation</li>
+          <li class="fragment">Operationalisation of variables</li>
+          <li class="fragment">Data collection and sampling</li>
+          <li class="fragment">Statistical inference and reporting</li>
+        </ul>
+      </section>
+
+      <!-- ============================================================
+           Slide 6 — Speaker notes (bonus)
+           ============================================================ -->
+      <section>
+        <h2>This Slide Has Speaker Notes</h2>
+        <p>
+          Speaker notes let you keep private reminders that only you can
+          see while presenting. The audience sees the slide; you see the
+          notes in a separate window.
+        </p>
+
+        <!-- Press S while presenting to open the speaker view.
+             Notes are written inside an <aside class="notes"> block
+             and are invisible on the projected slide. -->
+        <aside class="notes">
+          These are example speaker notes. Only the presenter sees this
+          panel. Use it for talking points, timing cues, or reminders.
+
+          - Remind students about the assignment deadline.
+          - Mention the optional reading list on the course site.
+          - Ask if anyone has questions before the break.
+        </aside>
+      </section>
+
+    </div><!-- /.slides -->
+  </div><!-- /.reveal -->
+
+  <!-- reveal.js 5.1.0 from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      transition: 'slide'
+    });
+  </script>
+</body>
+</html>
