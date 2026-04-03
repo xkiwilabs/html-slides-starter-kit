@@ -62,7 +62,7 @@ Common chart types for research data:
 
 ![Sample bar chart](../../img/placeholder-chart.svg)
 
-*Figure 1: Sample bar chart*
+*Figure 1. Sample data across four experimental groups.*
 
 </div>
 </div>
@@ -73,9 +73,9 @@ Common chart types for research data:
 
 # Questions?
 
-📧 j.smith@university.edu
+j.smith@university.edu
 
-🔗 Slides available at: courses.university.edu/psyc1001
+Slides available at: courses.university.edu/psyc1001
 
 ---
 
