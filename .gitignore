@@ -19,5 +19,11 @@ Desktop.ini
 # Claude Code
 .claude/
 
+# Quarto rendered output
+tools/quarto/slides.html
+tools/quarto/slides_files/
+tools/quarto/*_files/
+*.quarto_ipynb
+
 # Planning docs (not for distribution)
 html-slides-starter-repo.md
